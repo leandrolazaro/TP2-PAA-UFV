@@ -9,7 +9,7 @@ WARN=-Wall
 
 CCFLAGS=$(WARN)
 
-SRC= pyramidProblem/pyramid/pyramid.c pyramidProblem/way/way.c main.c
+SRC= pyramidProblem/structs/pyramid/pyramid.c pyramidProblem/structs/way/way.c main.c
 
 all:
 	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm -O3

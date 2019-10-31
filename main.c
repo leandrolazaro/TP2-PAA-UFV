@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "./pyramidProblem/pyramid/pyramid.h"
+#include "./pyramidProblem/structs/pyramid/pyramid.h"
 
 int main(){
     pyramid *_pyramid=NULL;
@@ -8,6 +8,7 @@ int main(){
 
     pyramidInitWhithFile((&_pyramid), fileName);
     pyramidShowPyramid((&_pyramid));
+    pyramidMemorizationSolution(&_pyramid);
 
     return 0;
 }
