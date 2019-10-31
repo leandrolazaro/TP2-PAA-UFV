@@ -8,8 +8,13 @@
 #include <math.h>
 #include "../way/way.h"
 
+typedef struct pyramidItem{
+    int content;
+    int written;
+}pyramidItem;
+
 typedef struct pyramid{
-    int **content;
+    pyramidItem **_pyramidItem;
     int size;
 }pyramid;
 
@@ -23,7 +28,7 @@ void pyramidRecursiveSolution(pyramid **_pyramid);
 int pyramidRecursiveSolutionMax(pyramid **_pyramid, pyramid **weightPyramid, int i, int j);
 void pyramidMemorizationSolution(pyramid **_pyramid);
 int pyramidMemorizationSolutionMax(pyramid **_pyramid, pyramid **memorizationPyramid, int i, int j);
-void pyramidFromBackToFrontSolution(pyramid **_pyramid, pyramid **memorizationPyramid);
+void pyramidFromBackToFrontSolution(pyramid **_pyramid);
 int pyramidTheLargestOfTwoNumbers(int number1, int number2);
 void pyramidShowPyramid(pyramid **_pyramid);
 void pyramidShowBiggerWay(pyramid **_pyramid, pyramid **weightPyramid, int i, int j);

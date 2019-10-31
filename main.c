@@ -7,8 +7,14 @@ int main(){
     char fileName[100]="teste.txt";
 
     pyramidInitWhithFile((&_pyramid), fileName);
+    printf("-----\n");
     pyramidShowPyramid((&_pyramid));
+    printf("-----\n");
+    pyramidRecursiveSolution(&_pyramid);
+    printf("-----\n");
     pyramidMemorizationSolution(&_pyramid);
+    printf("-----\n");
+    pyramidFromBackToFrontSolution(&_pyramid);
 
     return 0;
 }
