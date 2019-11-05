@@ -1,10 +1,9 @@
 #include "./pyramid.h"
 
 void pyramidInitWhithFile(pyramid **_pyramid, char *fileName){
-
     (*_pyramid)=malloc(sizeof(pyramid));
 
-    char path[100]="./././inputFiles/";
+    char path[100]="././inputFiles/";
     FILE *file=NULL;
     char *temp=(char*)malloc(50*sizeof(char));
 

@@ -6,7 +6,6 @@
 #include <string.h>
 
 void edtionDistanceFromBackToFrontSolution(char *wordA, char *wordB);
-void bubbleSort(int *v, int n);
-void swap(int *a, int *b);
+int min(int a, int b);
 
 #endif

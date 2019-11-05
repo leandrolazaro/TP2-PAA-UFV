@@ -1,4 +1,4 @@
-TARGET=maze
+TARGET=editionDistance
 
 # compiler
 CC=gcc

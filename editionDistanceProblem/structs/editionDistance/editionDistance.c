@@ -3,7 +3,6 @@
 void edtionDistanceFromBackToFrontSolution(char *wordA, char *wordB){
 
     int value=0;
-    int *vetorPesos=malloc(3*sizeof(int));
     int x=(strlen(wordA)+1);
     int y=(strlen(wordB)+1);
 
@@ -15,14 +14,6 @@ void edtionDistanceFromBackToFrontSolution(char *wordA, char *wordB){
         }
     }
 
-    for(int i=0; i<y; i++){
-        for(int j=0; j<x; j++){
-            printf("%d", de[i][j]);
-        }
-        printf("\n");
-    }
-
-    printf("%d\n", de[y-1][x-1]);
     for(int i=0; i<y; i++){
         de[i][0]=i;
     }
@@ -38,37 +29,23 @@ void edtionDistanceFromBackToFrontSolution(char *wordA, char *wordB){
             }else{
                 value=1;
             }
-            vetorPesos[0]=de[i-1][j-1]+value;
-            vetorPesos[1]=de[i-1][j]+1;
-            vetorPesos[2]=de[i][j-1]+1;
-            bubbleSort(vetorPesos, 3);
-            de[i][j]=vetorPesos[0];
-            printf("%c %c\n",wordA[j-1], wordB[i-1]);
-            printf("%d\n", vetorPesos[0]);
-
+            de[i][j]=min(min((de[i-1][j]+1), (de[i][j-1]+1)),(de[i-1][j-1]+value));
         }
     }
 
-    for(int i=0; i<y; i++){
-        for(int j=0; j<x; j++){
-            printf("%d", de[i][j]);
-        }
-        printf("\n");
-    }
+    // for(int i=0; i<y; i++){
+    //     for(int j=0; j<x; j++){
+    //         printf("%d", de[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    printf("Distância de edição final: %d\n", de[y-1][x-1]);
     
 }
 
-void bubbleSort(int *v, int n){ 
-    if (n < 1)return; 
- 
-    for (int i=0; i<n; i++) 
-        if (v[i] > v[i+1]) 
-            swap(&v[i], &v[i+1]);  
-    bubbleSort(v, n-1); 
-} 
-
-void swap(int *a, int *b){ 
-    int temp = *a; 
-    *a = *b; 
-    *b = temp; 
-} 
+int min(int a, int b){
+    if(a<b){
+        return a;
+    }
+    return b;
+}

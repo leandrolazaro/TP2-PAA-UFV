@@ -1,4 +1,4 @@
-TARGET=maze
+TARGET=pyramidProblem
 
 # compiler
 CC=gcc
@@ -9,7 +9,7 @@ WARN=-Wall
 
 CCFLAGS=$(WARN)
 
-SRC= pyramidProblem/structs/pyramid/pyramid.c pyramidProblem/structs/way/way.c main.c
+SRC= structs/pyramid/pyramid.c structs/way/way.c main.c
 
 all:
 	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm -O3
