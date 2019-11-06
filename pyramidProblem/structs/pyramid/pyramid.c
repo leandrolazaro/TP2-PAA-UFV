@@ -5,27 +5,47 @@ void pyramidInitWhithFile(pyramid **_pyramid, char *fileName){
 
     char path[100]="././inputFiles/";
     FILE *file=NULL;
-    char *temp=(char*)malloc(50*sizeof(char));
 
     strcat(path, fileName);
 
     file=fopen(path, "r");
 
     if(file != NULL){
-        (*temp)=fgetc(file);
-        (*_pyramid)->size= atoi(temp);
+        fscanf(file, "%d \n", &(*_pyramid)->size);
     }
 
     (*_pyramid)->_pyramidItem=malloc((*_pyramid)->size*sizeof(pyramidItem*));
     for(int i=0; i<(*_pyramid)->size; i++){
         (*_pyramid)->_pyramidItem[i]=malloc((i+1)*sizeof(pyramidItem));
         for(int j=0; j<=i; j++){
-            if(fscanf(file, "%s", temp)){
-                (*_pyramid)->_pyramidItem[i][j].content=atoi(temp);
-                (*_pyramid)->_pyramidItem[i][j].written=0;
+            fscanf(file, "%d ", &(*_pyramid)->_pyramidItem[i][j].content);
+            (*_pyramid)->_pyramidItem[i][j].written=0;
+        }
+
+        fscanf(file, "\n");
+    }
+
+    fclose(file);
+}
+
+void pyramidGenereteRandomPyramidInFile(int height){
+
+    char path[100]="././inputFiles/randomPyramid.txt";
+    FILE *file=NULL;
+
+    file=fopen(path, "w");
+    
+    if(file != NULL){
+        fprintf(file, "%d \n", height);
+        for(int i=0; i<height; i++){
+            for (int j=0; j<=i; j++){
+                fprintf(file, "%d ", (rand() % (99)));
             }
+            fprintf(file, "\n");
         }
     }
+    fclose(file);
+
 }
 
 void pyramidGenericInit(pyramid **_pyramid, int size){
