@@ -5,35 +5,36 @@
 int main(int argc, char *argv[]){
     char fileName[100];
     pyramid *_pyramid=NULL;
-    if(!strcmp("genereteRandomFile", argv[1])){
-        //printf("teste\n");
-        strcpy(fileName, argv[2]);
-        pyramidGenereteRandomPyramidInFile(atoi(argv[argc-1]),fileName);
-    }else{
-        if(!strcmp("useFile", argv[1])){
-            strcpy(fileName, argv[2]);
-            pyramidInitWhithFile((&_pyramid), fileName);
-        }
-        if(_pyramid!=NULL){
-            switch (atoi(argv[argc-1])){
-            case 0:
-                printf("----- Solução Recursiva -----\n\n");
-                pyramidRecursiveSolution(&_pyramid);
-                break;
-            case 1:
-                printf("----- Solução com Memorization -----\n\n");
-                pyramidMemorizationSolution(&_pyramid);
-                break;
-            case 2:
-                printf("----- Solução De Trás Pra Frente -----\n\n");
-                pyramidFromBackToFrontSolution(&_pyramid);
-                break;
-            default:
-                break;
-            }
-        }
-    }
-    
 
+    strcpy(fileName, argv[2]);
+
+    switch (atoi(argv[1])){
+        case 0:
+            if(*argv[3] == '1') printf("----- Solução Recursiva -----\n\n");
+            pyramidInitWhithFile((&_pyramid), fileName);
+            pyramidRecursiveSolution(&_pyramid);
+
+            break;
+        case 1:
+            if(*argv[3] == '1') printf("----- Solução com Memorization -----\n\n");
+            pyramidInitWhithFile((&_pyramid), fileName);
+            pyramidMemorizationSolution(&_pyramid);
+            
+            break;
+        case 2:
+            if(*argv[3] == '1') printf("----- Solução De Trás Pra Frente -----\n\n");
+            pyramidInitWhithFile((&_pyramid), fileName);
+            pyramidFromBackToFrontSolution(&_pyramid);
+
+            break;
+        case 3:
+            if(*argv[4] == '1') printf("----- Criando arquivo aleatorio -----\n");
+            pyramidGenereteRandomPyramidInFile(atoi(argv[3]),fileName);
+            break;
+
+        default:
+            break;
+        }
+    
     return 0;
 }

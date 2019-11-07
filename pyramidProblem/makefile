@@ -1,4 +1,4 @@
-TARGET=pyramidProblem
+TARGET=pyramidProblem.o
 
 # compiler
 CC=gcc
