@@ -7,8 +7,6 @@ def showMenu():
     print("---------------------------------------------------------")
     print("1 - Executar algorítmos manualmente;")
     print("2 - Criar pirâmide de entrada;")
-    print("3 - Executar testes exaustivos para exibir gráficos;")
-    print("4 - Exibir gráficos;")
     print()
     print("9 - Sair.")
     print("---------------------------------------------------------")
@@ -88,6 +86,18 @@ while True:
         else:
             print("Opção inválida! Voltando ao menu principal...")
 
+    elif(selection==2):
+        filename = input("Digite o nome do arquivo que será gerado em pyramidProblem/inputFiles: ")
+        
+        while True:
+            try:
+                subSelection = int(input("Digite a altura da árvore: "))
+                break
+            except:
+                print("Digite um valor inteiro!")
+
+        print(distanceExecutable + " 3 " + filename + " " + str(subSelection) + " 0")
+    
     elif(selection==9):
         break
 
