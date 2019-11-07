@@ -68,7 +68,7 @@ int pyramidGetItem(pyramid **_pyramid, int i, int j){
     if(i<(*_pyramid)->size && j<=i){
         return (*_pyramid)->_pyramidItem[i][j].content;
     }else{
-        printf("Animal, você não sabe o que é uma pirâmide?\n");
+        printf("Piramide invalida\n");
     }
 
     return -1;
@@ -78,7 +78,7 @@ void pyramidSetItem(pyramid **_pyramid, int i, int j, int item){
     if(i<(*_pyramid)->size && j<=i){
         (*_pyramid)->_pyramidItem[i][j].content=item;
     }else{
-        printf("Animal, você não sabe o que é uma pirâmide?\n");
+        printf("Piramide invalida\n");
     }
 }
 
@@ -141,12 +141,6 @@ int pyramidMemorizationSolutionMax(pyramid **_pyramid, pyramid **memorizationPyr
         (*memorizationPyramid)->_pyramidItem[i][j].written=1;
         return (*_pyramid)->_pyramidItem[i][j].content;
     }
-    // if((*memorizationPyramid)->_pyramidItem[i+1][j].written && (*memorizationPyramid)->_pyramidItem[i+1][j+1].written){
-    //     if((*memorizationPyramid)->_pyramidItem[i+1][j].content>(*memorizationPyramid)->_pyramidItem[i+1][j+1].content){
-    //         return (*memorizationPyramid)->_pyramidItem[i+1][j].content;
-    //     }
-    //     return (*memorizationPyramid)->_pyramidItem[i+1][j+1].content;    
-    // }
 
     if((*memorizationPyramid)->_pyramidItem[i+1][j].written){
         esquerda=(*memorizationPyramid)->_pyramidItem[i+1][j].content;
@@ -159,8 +153,6 @@ int pyramidMemorizationSolutionMax(pyramid **_pyramid, pyramid **memorizationPyr
     }else{
         direita=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j+1);    
     }
-    // esquerda=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j);
-    // direita=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j+1);
     if(esquerda>direita){
         (*memorizationPyramid)->_pyramidItem[i][j].content=(*_pyramid)->_pyramidItem[i][j].content+esquerda;
         (*memorizationPyramid)->_pyramidItem[i][j].written=1;
