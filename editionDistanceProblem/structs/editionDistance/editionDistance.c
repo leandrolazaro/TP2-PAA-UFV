@@ -1,6 +1,6 @@
 #include "./editionDistance.h"
 
-void edtionDistanceFromBackToFrontSolution(char *wordA, char *wordB){
+void edtionDistanceFromBackToFrontSolution(char *wordA, char *wordB, char *print){
 
     int value=0;
     int x=(strlen(wordA)+1);
@@ -39,7 +39,7 @@ void edtionDistanceFromBackToFrontSolution(char *wordA, char *wordB){
     //     }
     //     printf("\n");
     // }
-    printf("Distância de edição final: %d\n", de[y-1][x-1]);
+    if(*print=='1') printf("Distância de edição final: %d\n", de[y-1][x-1]);
     
 }
 

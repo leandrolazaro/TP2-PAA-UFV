@@ -1,4 +1,4 @@
-TARGET=editionDistance
+TARGET=editionDistanceProblem.o
 
 # compiler
 CC=gcc
