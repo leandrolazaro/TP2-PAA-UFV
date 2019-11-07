@@ -12,10 +12,10 @@ CCFLAGS=$(WARN)
 SRC= structs/editionDistance/editionDistance.c main.c
 
 all:
-	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm -O3
+	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm
 
 debug:
-	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm -DDEBUG=1 -O3
+	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm -DDEBUG=1
 
 run:
 	./$(TARGET)
