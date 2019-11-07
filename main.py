@@ -9,6 +9,7 @@ def showMenu():
     print("2 - Criar pirâmide de entrada;")
     print("3 - Executar testes exaustivos para exibir gráficos;")
     print("4 - Exibir gráficos;")
+    print()
     print("9 - Sair.")
     print("---------------------------------------------------------")
     print()
@@ -21,14 +22,16 @@ def showAlgorithms():
     print("2- Problema da pirâmide com memorization;")
     print("3- Problema da pirâmide de trás para frente;")
     print("4- Problema da distância de edição;")
-    print("")
     print()
+    print("8- Ligar/desligar modo debug")
     print("9- Voltar.")
     print("---------------------------------------------------------")
     print()
 
 pyramidExecutable = "cd pyramidProblem && ./pyramidProblem.o"
 distanceExecutable = "cd editionDistanceProblem && ./editionDistanceProblem.o"
+
+debug = True
 
 pyramidFiles = "pyramidProblem/inputFiles/"
 
@@ -89,3 +92,6 @@ while True:
 
     elif(selection==9):
         break
+
+    else:
+        print("Opção inválida!")
