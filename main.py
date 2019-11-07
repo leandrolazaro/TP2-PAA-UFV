@@ -31,8 +31,6 @@ def showAlgorithms():
 pyramidExecutable = "cd pyramidProblem && ./pyramidProblem.o"
 distanceExecutable = "cd editionDistanceProblem && ./editionDistanceProblem.o"
 
-debug = True
-
 pyramidFiles = "pyramidProblem/inputFiles/"
 
 print("Compilando binários...")
