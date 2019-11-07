@@ -1,3 +1,6 @@
+import os
 from csvGenerators import *
 
-a = CsvGeneratorValgrind()
+print("Compilando binários...")
+os.system("cd pyramidProblem && make")
+os.system("cd editionDistanceProblem && make")
