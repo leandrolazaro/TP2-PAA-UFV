@@ -14,14 +14,5 @@ SRC= structs/editionDistance/editionDistance.c main.c
 all:
 	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm
 
-debug:
-	$(CC) -o $(TARGET) $(SRC) $(CCFLAGS) -lm -DDEBUG=1
-
-run:
-	./$(TARGET)
-
 clear:
 	rm $(TARGET)
-
-clang:
-	$(CCO) -o $(TARGET) $(SRC) $(CCFLAGS) -lm -O3
