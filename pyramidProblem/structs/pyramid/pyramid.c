@@ -11,27 +11,29 @@ void pyramidInitWhithFile(pyramid **_pyramid, char *fileName){
     file=fopen(path, "r");
 
     if(file != NULL){
-        fscanf(file, "%d \n", &(*_pyramid)->size);
+        if(fscanf(file, "%d \n", &(*_pyramid)->size));
     }
 
     (*_pyramid)->_pyramidItem=malloc((*_pyramid)->size*sizeof(pyramidItem*));
     for(int i=0; i<(*_pyramid)->size; i++){
         (*_pyramid)->_pyramidItem[i]=malloc((i+1)*sizeof(pyramidItem));
         for(int j=0; j<=i; j++){
-            fscanf(file, "%d ", &(*_pyramid)->_pyramidItem[i][j].content);
+            if(fscanf(file, "%d ", &(*_pyramid)->_pyramidItem[i][j].content));
             (*_pyramid)->_pyramidItem[i][j].written=0;
         }
 
-        fscanf(file, "\n");
+        if(fscanf(file, "\n"));
     }
 
     fclose(file);
 }
 
-void pyramidGenereteRandomPyramidInFile(int height){
+void pyramidGenereteRandomPyramidInFile(int height, char *fileName){
 
-    char path[100]="././inputFiles/randomPyramid.txt";
+    char path[100]="././inputFiles/";
     FILE *file=NULL;
+
+    strcat(path, fileName);
 
     file=fopen(path, "w");
     
@@ -139,14 +141,26 @@ int pyramidMemorizationSolutionMax(pyramid **_pyramid, pyramid **memorizationPyr
         (*memorizationPyramid)->_pyramidItem[i][j].written=1;
         return (*_pyramid)->_pyramidItem[i][j].content;
     }
-    if((*memorizationPyramid)->_pyramidItem[i+1][j].written && (*memorizationPyramid)->_pyramidItem[i+1][j+1].written){
-        if((*memorizationPyramid)->_pyramidItem[i+1][j].content>(*memorizationPyramid)->_pyramidItem[i+1][j+1].content){
-            return (*memorizationPyramid)->_pyramidItem[i+1][j].content;
-        }
-        return (*memorizationPyramid)->_pyramidItem[i+1][j+1].content;    
+    // if((*memorizationPyramid)->_pyramidItem[i+1][j].written && (*memorizationPyramid)->_pyramidItem[i+1][j+1].written){
+    //     if((*memorizationPyramid)->_pyramidItem[i+1][j].content>(*memorizationPyramid)->_pyramidItem[i+1][j+1].content){
+    //         return (*memorizationPyramid)->_pyramidItem[i+1][j].content;
+    //     }
+    //     return (*memorizationPyramid)->_pyramidItem[i+1][j+1].content;    
+    // }
+
+    if((*memorizationPyramid)->_pyramidItem[i+1][j].written){
+        esquerda=(*memorizationPyramid)->_pyramidItem[i+1][j].content;
+    }else{
+        esquerda=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j);    
     }
-    esquerda=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j);
-    direita=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j+1);
+
+    if((*memorizationPyramid)->_pyramidItem[i+1][j+1].written){
+        direita=(*memorizationPyramid)->_pyramidItem[i+1][j+1].content;
+    }else{
+        direita=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j+1);    
+    }
+    // esquerda=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j);
+    // direita=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j+1);
     if(esquerda>direita){
         (*memorizationPyramid)->_pyramidItem[i][j].content=(*_pyramid)->_pyramidItem[i][j].content+esquerda;
         (*memorizationPyramid)->_pyramidItem[i][j].written=1;

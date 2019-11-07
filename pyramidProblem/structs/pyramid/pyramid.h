@@ -19,7 +19,7 @@ typedef struct pyramid{
 }pyramid;
 
 void pyramidInitWhithFile(pyramid **_pyramid, char *fileName);
-void pyramidGenereteRandomPyramidInFile(int height);
+void pyramidGenereteRandomPyramidInFile(int height, char *fileName);
 void pyramidGenericInit(pyramid **_pyramid, int size);
 int pyramidGetItem(pyramid **_pyramid, int i, int j);
 void pyramidSetItem(pyramid **_pyramid, int i, int j, int item);
