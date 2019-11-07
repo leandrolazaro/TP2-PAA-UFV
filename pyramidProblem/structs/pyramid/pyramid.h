@@ -6,7 +6,6 @@
 #include <time.h> 
 #include <string.h>
 #include <math.h>
-#include "../way/way.h"
 
 typedef struct pyramidItem{
     int content;
