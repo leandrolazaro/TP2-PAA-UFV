@@ -1,0 +1,533 @@
+desc: --stacks=yes
+cmd: ./pyramidProblem.o 2 gasosa.txt 1
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1479
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=400
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=24001
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=400
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=3
+#-----------
+time=32366
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=7128
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=44557
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1088
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=60844
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1096
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=6
+#-----------
+time=73849
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1576
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=84584
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1312
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=96890
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=106985
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1576
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=118816
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1416
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=127635
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=139754
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1576
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=150385
+mem_heap_B=5936
+mem_heap_extra_B=64
+mem_stacks_B=2848
+heap_tree=detailed
+n4: 5936 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x4EB118A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4EC1377: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x4EC0252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x4EC13F0: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x4E9EBE8: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x4EAF2E4: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n1: 4096 0x108C6C: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+        n0: 4096 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n1: 1024 0x4EC0496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x4EBE9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x4EB3A8D: puts (ioputs.c:40)
+      n0: 1024 0x108A8F: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 552 0x4EB1E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 552 0x108C4B: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n0: 552 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 240 0x108C80: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 240 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n0: 24 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=160720
+mem_heap_B=6048
+mem_heap_extra_B=112
+mem_stacks_B=792
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=167865
+mem_heap_B=6152
+mem_heap_extra_B=136
+mem_stacks_B=2848
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=180162
+mem_heap_B=6288
+mem_heap_extra_B=160
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=190389
+mem_heap_B=6368
+mem_heap_extra_B=168
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=202480
+mem_heap_B=6552
+mem_heap_extra_B=192
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=209809
+mem_heap_B=6656
+mem_heap_extra_B=208
+mem_stacks_B=2848
+heap_tree=detailed
+n5: 6656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x4EB118A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4EC1377: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x4EC0252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x4EC13F0: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x4E9EBE8: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x4EAF2E4: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n1: 4096 0x108C6C: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+        n0: 4096 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n1: 1024 0x4EC0496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x4EBE9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x4EB3A8D: puts (ioputs.c:40)
+      n0: 1024 0x108A8F: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 728 0x108CB8: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 728 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 552 0x4EB1E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 552 0x108C4B: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n0: 552 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 240 0x108C80: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 240 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n0: 16 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=220822
+mem_heap_B=6768
+mem_heap_extra_B=216
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=232780
+mem_heap_B=6888
+mem_heap_extra_B=232
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=245350
+mem_heap_B=7016
+mem_heap_extra_B=240
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=255545
+mem_heap_B=7152
+mem_heap_extra_B=256
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=268056
+mem_heap_B=7296
+mem_heap_extra_B=264
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=284231
+mem_heap_B=7448
+mem_heap_extra_B=280
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=293584
+mem_heap_B=7608
+mem_heap_extra_B=288
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=301264
+mem_heap_B=7608
+mem_heap_extra_B=288
+mem_stacks_B=840
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=315915
+mem_heap_B=7776
+mem_heap_extra_B=304
+mem_stacks_B=800
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=325085
+mem_heap_B=7952
+mem_heap_extra_B=312
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=332658
+mem_heap_B=7952
+mem_heap_extra_B=312
+mem_stacks_B=800
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=344266
+mem_heap_B=8136
+mem_heap_extra_B=328
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=356456
+mem_heap_B=8328
+mem_heap_extra_B=336
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=365611
+mem_heap_B=8328
+mem_heap_extra_B=336
+mem_stacks_B=800
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=378614
+mem_heap_B=8528
+mem_heap_extra_B=352
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=390813
+mem_heap_B=8736
+mem_heap_extra_B=360
+mem_stacks_B=2848
+heap_tree=detailed
+n5: 8736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x4EB118A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4EC1377: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x4EC0252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x4EC13F0: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x4E9EBE8: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x4EAF2E4: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n1: 4096 0x108C6C: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+        n0: 4096 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n1: 1024 0x4EC0496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x4EBE9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x4EB3A8D: puts (ioputs.c:40)
+      n0: 1024 0x108A8F: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 2808 0x108CB8: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 2808 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 552 0x4EB1E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 552 0x108C4B: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n0: 552 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 240 0x108C80: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 240 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n0: 16 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=399926
+mem_heap_B=8736
+mem_heap_extra_B=360
+mem_stacks_B=840
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=411243
+mem_heap_B=8952
+mem_heap_extra_B=376
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=421917
+mem_heap_B=8952
+mem_heap_extra_B=376
+mem_stacks_B=2568
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=435376
+mem_heap_B=9176
+mem_heap_extra_B=384
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=447586
+mem_heap_B=9176
+mem_heap_extra_B=384
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=455724
+mem_heap_B=9408
+mem_heap_extra_B=400
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=470619
+mem_heap_B=9648
+mem_heap_extra_B=408
+mem_stacks_B=2848
+heap_tree=peak
+n5: 9648 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x4EB118A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4EC1377: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x4EC0252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x4EC13F0: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x4E9EBE8: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x4EAF2E4: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n1: 4096 0x108C6C: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+        n0: 4096 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n1: 1024 0x4EC0496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x4EBE9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x4EB3A8D: puts (ioputs.c:40)
+      n0: 1024 0x108A8F: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 3720 0x108CB8: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 3720 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 552 0x4EB1E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 552 0x108C4B: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n0: 552 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 240 0x108C80: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 240 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n0: 16 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=485822
+mem_heap_B=9648
+mem_heap_extra_B=408
+mem_stacks_B=2568
+heap_tree=detailed
+n5: 9648 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x4EB118A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4EC1377: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x4EC0252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x4EC13F0: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x4E9EBE8: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x4EAF2E4: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n1: 4096 0x108C6C: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+        n0: 4096 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n1: 1024 0x4EC0496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x4EBE9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x4EB3A8D: puts (ioputs.c:40)
+      n0: 1024 0x108A8F: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 3720 0x108CB8: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 3720 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 552 0x4EB1E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 552 0x108C4B: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n0: 552 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 240 0x108C80: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 240 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n0: 16 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=494922
+mem_heap_B=7856
+mem_heap_extra_B=704
+mem_stacks_B=472
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=503483
+mem_heap_B=8976
+mem_heap_extra_B=760
+mem_stacks_B=2120
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=519999
+mem_heap_B=8976
+mem_heap_extra_B=760
+mem_stacks_B=2200
+heap_tree=detailed
+n6: 8976 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3720 0x108CB8: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 3720 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 3720 0x10986B: pyramidFromBackToFrontSolution (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 3720 0x108A26: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 1024 0x4EB118A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4EC1377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x4EC0496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x4EBE9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x4EB3A8D: puts (ioputs.c:40)
+      n0: 1024 0x108A8F: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 240 0x108C80: pyramidInitWhithFile (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 240 0x108A1E: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n1: 240 0x10981F: pyramidFromBackToFrontSolution (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+  n0: 240 0x108A26: main (in /home/leandro/Documentos/git/TP2-PAA-UFV/pyramidProblem/pyramidProblem.o)
+ n0: 32 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=530487
+mem_heap_B=8976
+mem_heap_extra_B=760
+mem_stacks_B=2200
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=543926
+mem_heap_B=8976
+mem_heap_extra_B=760
+mem_stacks_B=2264
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=557546
+mem_heap_B=5000
+mem_heap_extra_B=384
+mem_stacks_B=536
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=559028
+mem_heap_B=3976
+mem_heap_extra_B=376
+mem_stacks_B=448
+heap_tree=empty

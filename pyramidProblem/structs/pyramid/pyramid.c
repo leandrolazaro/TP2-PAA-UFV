@@ -113,6 +113,14 @@ int pyramidRecursiveSolutionMax(pyramid **_pyramid, pyramid **weightPyramid, int
     int esquerda, direita;
     if(i+1==(*_pyramid)->size){
         (*weightPyramid)->_pyramidItem[i][j].content=(*_pyramid)->_pyramidItem[i][j].content;
+        #ifdef DEBUG
+            if(j+1==(*_pyramid)->size){
+                printf("Aperte enter para continuar\n");
+                char enter = 0;
+                while (enter != '\r' && enter != '\n') { enter = getchar(); }
+                //printf("Thank you for pressing enter\n");
+            }
+        #endif
         return (*_pyramid)->_pyramidItem[i][j].content;
     }
     esquerda=pyramidRecursiveSolutionMax(_pyramid, weightPyramid, i+1, j);
@@ -135,32 +143,27 @@ void pyramidMemorizationSolution(pyramid **_pyramid){
     pyramidDeletePyramid(&memorizationPyramid);
 }
 int pyramidMemorizationSolutionMax(pyramid **_pyramid, pyramid **memorizationPyramid, int i, int j){
-    int esquerda, direita;
     if(i+1==(*_pyramid)->size){
+        // scanf(" ");
         (*memorizationPyramid)->_pyramidItem[i][j].content=(*_pyramid)->_pyramidItem[i][j].content;
         (*memorizationPyramid)->_pyramidItem[i][j].written=1;
-        return (*_pyramid)->_pyramidItem[i][j].content;
+        #ifdef DEBUG
+            if(j+1==(*_pyramid)->size){
+                printf("Aperte enter para continuar\n");
+                char enter = 0;
+                while (enter != '\r' && enter != '\n') { enter = getchar(); }
+                //printf("Thank you for pressing enter\n");
+            }
+        #endif
+        return (*memorizationPyramid)->_pyramidItem[i][j].content;
     }
 
-    if((*memorizationPyramid)->_pyramidItem[i+1][j].written){
-        esquerda=(*memorizationPyramid)->_pyramidItem[i+1][j].content;
-    }else{
-        esquerda=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j);    
-    }
-
-    if((*memorizationPyramid)->_pyramidItem[i+1][j+1].written){
-        direita=(*memorizationPyramid)->_pyramidItem[i+1][j+1].content;
-    }else{
-        direita=pyramidRecursiveSolutionMax(_pyramid, memorizationPyramid, i+1, j+1);    
-    }
-    if(esquerda>direita){
-        (*memorizationPyramid)->_pyramidItem[i][j].content=(*_pyramid)->_pyramidItem[i][j].content+esquerda;
+    if(!((*memorizationPyramid)->_pyramidItem[i][j].written)){
+        (*memorizationPyramid)->_pyramidItem[i][j].content=(*_pyramid)->_pyramidItem[i][j].content+pyramidMax(pyramidMemorizationSolutionMax(_pyramid, memorizationPyramid, i+1, j), pyramidMemorizationSolutionMax(_pyramid, memorizationPyramid, i+1, j+1));
         (*memorizationPyramid)->_pyramidItem[i][j].written=1;
-        return (*_pyramid)->_pyramidItem[i][j].content+esquerda;
     }
-    (*memorizationPyramid)->_pyramidItem[i][j].content=(*_pyramid)->_pyramidItem[i][j].content+direita;
-    (*memorizationPyramid)->_pyramidItem[i][j].written=1;
-    return (*_pyramid)->_pyramidItem[i][j].content+direita;
+
+    return (*memorizationPyramid)->_pyramidItem[i][j].content;
 }
 
 void pyramidFromBackToFrontSolution(pyramid **_pyramid){
@@ -178,6 +181,12 @@ void pyramidFromBackToFrontSolution(pyramid **_pyramid){
             }
         }
     }
+    #ifdef DEBUG
+        printf("Aperte enter para continuar\n");
+        char enter = 0;
+        while (enter != '\r' && enter != '\n') { enter = getchar(); }
+        //printf("Thank you for pressing enter\n");
+    #endif
     pyramidShowBiggerWay(_pyramid, &memorizationPyramid,0, 0);
     printf("Maior Soma: %d unidade(s)\n", (memorizationPyramid)->_pyramidItem[0][0].content);
     pyramidDeletePyramid(&memorizationPyramid);
@@ -204,4 +213,11 @@ void pyramidShowBiggerWay(pyramid **_pyramid, pyramid **weightPyramid, int i, in
         }
     }
     return;
+}
+
+int pyramidMax(int a, int b){
+    if(a>b){
+        return a;    
+    }
+    return b;
 }

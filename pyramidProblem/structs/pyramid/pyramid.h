@@ -6,6 +6,7 @@
 #include <time.h> 
 #include <string.h>
 #include <math.h>
+#include <unistd.h>
 
 typedef struct pyramidItem{
     int content;
@@ -32,5 +33,6 @@ void pyramidFromBackToFrontSolution(pyramid **_pyramid);
 int pyramidTheLargestOfTwoNumbers(int number1, int number2);
 void pyramidShowPyramid(pyramid **_pyramid);
 void pyramidShowBiggerWay(pyramid **_pyramid, pyramid **weightPyramid, int i, int j);
+int pyramidMax(int a, int b);
 
 #endif
